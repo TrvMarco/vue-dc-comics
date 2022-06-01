@@ -29,13 +29,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/style/mixins.scss';
+
 .header{
     
     & .container{
         height: 6.25rem;
     }
 
-    & .container, &__list{
+    & .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,13 +45,9 @@ export default {
     
     &__navbar{
         ul{
-            list-style: none;
+            @include listStyle;
             gap: 1.25rem;
             text-transform: uppercase;
-        }
-
-        li{
-            display: inline-block;
         }
 
         a{

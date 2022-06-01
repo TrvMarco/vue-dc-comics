@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
     main{
-        
+
         background-color: var(--main-bg-color);
 
         & h2{
