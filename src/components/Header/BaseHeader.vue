@@ -6,7 +6,7 @@
             </div>
             <nav class="header__navbar">
                 <ul class="header__list">
-                    <li v-for="(link,index) in links" :key="index" :class="{active: link.current}"><a href="#">{{link.text}}</a></li>
+                    <li v-for="(link,index) in links" :key="index" :class="{active: link.current}"><a href="#" @click="clicked(link)">{{link.text}}</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,7 +27,7 @@ export default {
                 {
                    text: 'comics',
                    url: '#',
-                   current: true
+                   current: false
                 },
                 {
                    text: 'movies',
@@ -72,6 +72,16 @@ export default {
             ]
         }
     },
+    methods: {
+        clicked(link){
+            console.log(link)
+           if(!link.current == true){
+               link.current = true;
+           }else{
+               link.current = false
+           }
+        }
+    }
 }
 </script>
 

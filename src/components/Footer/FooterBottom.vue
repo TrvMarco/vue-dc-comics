@@ -2,7 +2,7 @@
   <section class="footer-bottom">
       <div class="container">
           <div class="footer-left">
-              <button class="btn">Sign-up now!</button>
+              <button class="btn btn-border-blue">Sign-up now!</button>
           </div>
           <div class="footer-right">
               <nav>

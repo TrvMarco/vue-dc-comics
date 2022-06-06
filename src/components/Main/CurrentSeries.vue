@@ -1,11 +1,15 @@
 <template>
   <main>
     <div class="container">
+        <div class="section-title">
+            <h2>Current series</h2>
+        </div>
         <ul>
             <li v-for="(card,index) in dcComics" :key="index">
                 <ComicCard :image="card.thumb" :title="card.series"/>
             </li>
         </ul>
+        <button class="btn btn-bg-blue">Load more</button>
     </div>
   </main>
 </template>
@@ -94,7 +98,7 @@ export default {
                 }
             ]
         }
-    }
+    },
 }
 </script>
 
@@ -104,14 +108,33 @@ export default {
         background-color: var(--main-bg-color);
     }
     .container{
+        text-align: center;
+        position: relative;
         padding:3.125rem 0rem;
         & ul{
             @include listStyle;
             flex-wrap: wrap;
+            text-align: start;
             gap: .625rem;
             & li {
                 width: calc(100% / 6 - .625rem);
             }
+        }
+
+        & .section-title{
+            position: absolute;
+            display: inline-block;
+            padding: .3125rem .75rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1rem;
+            background-color: var(--primary-color);
+            top: (-1.25rem);
+            left: 0;
+        }
+
+        & button{
+            margin-top: 1.875rem;
         }
     }
 </style>

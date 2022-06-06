@@ -4,8 +4,17 @@
     font-size: .9375rem;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: transparent;
     color: #fff;
-    border: 1px solid var(--primary-color);
     cursor: pointer;
+}
+
+.btn-border-blue{
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-bg-blue{
+    background-color: var(--primary-color);
+    border: none;
+    padding: .625rem 1.875rem;
 }
