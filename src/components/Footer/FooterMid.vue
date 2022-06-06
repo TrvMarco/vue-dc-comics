@@ -67,6 +67,8 @@ export default {
 
 .footer-mid{
     background-image: var(--footer-mid-bg-img);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     & .container{
         display: flex;
